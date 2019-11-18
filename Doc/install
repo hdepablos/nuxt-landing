@@ -1,0 +1,38 @@
+-- scss
+npm i -D node-sass sass-loader
+
+-- Esto es para hacer import desde style con scss, variables otros.
+npm i @nuxtjs/style-resources
+
+-- Animaciones
+npm install --save vue2-animate
+
+
+npm i nuxt-fontawesome
+npm i @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome
+npm i @fortawesome/free-solid-svg-icons
+
+$ npm i --save @fortawesome/fontawesome-svg-core
+$ npm i --save @fortawesome/free-solid-svg-icons
+$ npm i --save @fortawesome/vue-fontawesome
+
+npm install --save @fortawesome/vue-fontawesome 
+@fortawesome/fontawesome-svg-core 
+@fortawesome/free-solid-svg-icons 
+@fortawesome/free-brands-svg-icons
+
+npm i @fortawesome/fontawesome-svg-core
+npm i @fortawesome/free-brands-svg-icons
+npm i @fortawesome/free-solid-svg-icons
+npm i @fortawesome/vue-fontawesome
+
+npm i -S @fortawesome/fontawesome-svg-core
+npm i -S @fortawesome/free-brands-svg-icons
+npm i -S @fortawesome/free-solid-svg-icons
+npm i -S @fortawesome/free-regular-svg-icons
+npm i -S @fortawesome/vue-fontawesome
+npm i -S nuxt-fontawesome
+
+
+-- https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/free-brands-svg-icons
+npm i -S qonfucius-nuxt-fontawesome

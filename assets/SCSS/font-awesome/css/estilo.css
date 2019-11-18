@@ -1,0 +1,41 @@
+body{
+    
+}
+
+.section-padding{
+    padding: 100px 0;
+}
+
+.section-header{
+    padding-bottom: 30px;
+}
+
+.navbar-brand{
+    color: #262626;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-area{
+    background: #262626;
+}
+
+.navbar-nav .nav-link{
+    padding-right: 0;
+    padding-left: 0;
+    color: #262626;
+    font-weight: bold;
+}
+
+.nav-item{
+    color: #fff;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+
+/* slider */
+.slider-area{
+    background-image: url("patterns/header-profile.png");
+    /* url("patterns/header-profile.png") */
+}
