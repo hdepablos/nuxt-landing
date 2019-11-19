@@ -43,8 +43,6 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
 
-    // 'nuxt-fontawesome',
-    
     // // Simple usage
     'qonfucius-nuxt-fontawesome',
     // // With options
@@ -74,22 +72,13 @@ export default {
   },
 
   fontAwesome: {
-  //   // imports: [
-  //   //   {
-  //   //     set: '@fortawesome/free-solid-svg-icons', // Solid icons
-  //   //     icons: ['faCookieBite', 'faCommentDots', 'faEnvelope', 'faGrinWink', 'faHeart']
-  //   //   },
-  //   //   {
-  //   //     set: '@fortawesome/free-brands-svg-icons', // Brand icons
-  //   //     icons: ['faDev', 'faFacebook', 'faTwitter', 'faInstagram', 'faYoutube', 'faGithub', 'faFontAwesome']
-  //   //   }
-  //   // ]
-
     packs: [
       {
         // fas
         package: '@fortawesome/free-solid-svg-icons',
-        icons: ['faUsers', 'faUserPlus', 'faMedal', 'faAd','faMugHot','faSpinner','faCogs'],
+        icons: ['faUsers', 'faUserPlus', 'faCameraRetro', 'faLaptop', 'faEnvelopeSquare', 'faClipboardList',   
+        'faChartPie', 'faTabletAlt',
+        'faMedal', 'faAd','faMugHot','faSpinner','faCogs'],
       },
       {
         // fab
