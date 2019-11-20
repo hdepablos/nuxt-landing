@@ -1,6 +1,7 @@
 <template>
-  <div>
-      <h1>Esto es una pagina para crear las tablas</h1>
+  <div class="">
+      <h1>Esto es para las tablas</h1>
+      
   </div>
 </template>
 

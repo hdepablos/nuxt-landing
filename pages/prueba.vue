@@ -339,8 +339,9 @@
         },
         components: {
         },
+        created() {
+        },
         mounted() {
-            console.log("Prueba");
             new WOW().init();
         },
     }
