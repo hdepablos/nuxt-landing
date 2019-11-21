@@ -34,7 +34,8 @@
                 name="hora"
                 id="hora"
                 type="time"
-                format="hh:mm:ss a"
+                format="hh:mm a"
+                :minute-step="10"
                 style="width: 100%"
                 placeholder="Selecciona la hora"
               ></date-picker>
@@ -48,13 +49,16 @@
           <div class="row">
             <div class="col-md-12">
               <label class="control-label">Fecha y Hora:</label>
+
               <date-picker
                 v-model="datetime"
+                :shortcuts="shortcutsfechahora"
                 lang="es"
                 name="fechahora"
                 id="fechahora"
                 type="datetime"
-                format="DD-MM-YYYY, ddd [con] hh:mm:ss a"
+                :minute-step="5"
+                format="DD-MM-YYYY, ddd [con] hh:mm a"
                 placeholder="Selecciona fecha y hora"
                 style="width: 100%"
               ></date-picker>
@@ -71,8 +75,8 @@
             <div class="col-md-12">
               <label class="control-label">Rango de fecha:</label>
               <date-picker
-                :shortcuts="shortcutsrangefecha"
                 v-model="rangefecha"
+                :shortcuts="shortcutsrangefecha"
                 lang="es"
                 type="date"
                 range
@@ -89,24 +93,26 @@
         </div>
         <div class="col-md-6">
           <div class="row mt-5">
-            <div class="col-md-12">
-              <label class="control-label">Rango de fecha y hora:</label>
-              <date-picker
-                v-model="rangefechahora"
-                lang="es"
-                type="datetime"
-                range
-                name="rangofechahora"
-                id="rangofechahora"
-                style="width: 100%"
-                value-type="YYYY-MM-DD HH:mm:ss"
-                format="DD-MM-YYYY, ddd HH:mm:ss a"
-              ></date-picker>
+            <div class="col-md-12 no-ssr-placeholder">
+              <client-only placeholder="Loading...">
+                <label class="control-label">Rango de fecha y hora:</label>
+                <date-picker
+                  v-model="rangefechahora"
+                  :shortcuts="shortcutsrangefechahora"
+                  lang="es"
+                  type="datetime"
+                  range
+                  name="rangofechahora"
+                  id="rangofechahora"
+                  style="width: 100%"
+                  value-type="YYYY-MM-DD HH:mm:ss"
+                  format="DD-MM-YYYY, ddd HH:mm:ss a"
+                  confirm
+                ></date-picker>
+              </client-only>
             </div>
             <div class="col-md-12 mt-2">
-              <button @click.prevent="getRangoFechaHora()">
-                Get rango fecha y hora
-              </button>
+              <button @click.prevent="getRangoFechaHora()">Get rango fecha y hora</button>
             </div>
           </div>
         </div>
@@ -131,48 +137,87 @@ export default {
       date: "",
       time: "",
       datetime: "",
+      // rangefecha: [new Date(2019, 9, 8), new Date(2019, 9, 19)],
       rangefecha: "",
       rangefechahora: "",
       shortcutsrangefecha: [
         {
           text: "Hoy",
           onClick: () => {
-            this.rangefechahora = [new Date(), new Date()];
+            this.rangefechahora = [new Date(moment()), new Date(moment())];
           }
         },
         {
           text: "Mes anterior",
           onClick: () => {
-            const iMesAnterior = new moment()
+            const date1 = new Date(
+              moment()
+                .subtract(1, "months")
+                .date(1)
+            );
+            const date2 = new Date(moment().date(0));
+
+            this.rangefechahora = [date1, date2];
+            return [date1, date2];
+            // return date1;
+          }
+        }
+      ],
+      shortcutsrangefechahora: [
+        {
+          text: "Hoy",
+          onClick: () => {
+            this.fechahora = new Date();
+          }
+        },
+        {
+          text: "mes anterior",
+          onClick: () => {
+            var fechai = moment()
               .subtract(1, "months")
               .date(1)
-              .startOf();
-            const fMesAnterior = new moment().date(0).format("YYYY-MM-DD");
+              .toDate();
+            fechai.setHours(9);
+            fechai.setMinutes(30);
+            fechai.setSeconds(0);
 
-            // moment(('07-18-2013')).utc().format("YYYY-MM-DD").toString()
+            var fechaf = moment()
+              .date(0)
+              .toDate();
+            fechaf.setHours(18);
+            fechaf.setMinutes(30);
+            fechaf.setSeconds(0);
 
-            console.log("mes anterior");
-            console.log(iMesAnterior);
-            console.log(fMesAnterior);
+            this.rangefechahora = [fechai, fechaf];
 
-            const date1 = new Date();
-            console.log("date 00000000");
-            console.log(date1);
-
-            // date1.setTime(date1.getTime() - 3600 * 1000 * 24);
-            date1.setTime(iMesAnterior);
-
-            console.log("date 1111111111111111");
-            console.log(date1);
-
-            console.log("date1");
-            console.log(date1);
-
-            const date2 = new Date();
-            date2.setTime(date2.getTime() + 3600 * 1000 * 24);
-
-            this.rangefecha = [iMesAnterior, date2];
-            // this.rangefecha = [date1, date2];
+            // return [fechai, fechaf];
+          }
+        }
+      ],
+      shortcutsfechahora: [
+        {
+          text: "fin mes ant",
+          onClick: () => {
+            var fechahora = moment()
+              .date(0)
+              .toDate();
+            fechahora.setHours(9);
+            fechahora.setMinutes(30);
+            fechahora.setSeconds(0);
+            return fechahora;
+          }
+        },
+        {
+          text: "1 mes ant 10 a",
+          onClick: () => {
+            var fechahora = moment()
+              .subtract(1, "months")
+              .date(1)
+              .toDate();
+            fechahora.setHours(18);
+            fechahora.setMinutes(30);
+            fechahora.setSeconds(0);
+            return fechahora;
           }
         }
       ],
@@ -199,15 +244,11 @@ export default {
   methods: {
     getFecha() {
       console.log("Fecha");
-      console.log(this.date);
-      // console.log(date ? moment(date).format("LL") : "");
-      // console.log(moment.(this.date).format("YYYY-MM-DD"));
+      console.log(this.date ? moment(this.date).format("LL") : "");
     },
     setFecha() {
       console.log("Setear Fecha");
       console.log(this.date);
-      // console.log(date ? moment(date).format("LL") : "");
-      // console.log(moment.(this.date).format("YYYY-MM-DD"));
     },
     getHora() {
       console.log("Hora");
