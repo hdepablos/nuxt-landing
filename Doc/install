@@ -45,3 +45,9 @@ npm i -S nuxt-fontawesome
 
 -- https://github.com/FortAwesome/Font-Awesome/tree/master/js-packages/%40fortawesome/free-brands-svg-icons
 npm i -S qonfucius-nuxt-fontawesome
+
+
+
+-- Validation
+npm install vuelidate -S
+npm i vuelidate-error-extractor -S
