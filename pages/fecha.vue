@@ -8,6 +8,7 @@
               <label class="control-label">Fecha:</label>
               <date-picker
                 :shortcuts="shortcuts"
+                :disabled-date="notBeforeToday"
                 v-model="date"
                 name="fecha"
                 id="fecha"
@@ -53,6 +54,7 @@
               <date-picker
                 v-model="datetime"
                 :shortcuts="shortcutsfechahora"
+                :disabled-date="notAfterToday"
                 lang="es"
                 name="fechahora"
                 id="fechahora"
@@ -72,7 +74,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="row mt-5">
-            <div class="col-md-12">
+            <div class="col-md-12 has-error">
               <label class="control-label">Rango de fecha:</label>
               <date-picker
                 v-model="rangefecha"
@@ -93,7 +95,7 @@
         </div>
         <div class="col-md-6">
           <div class="row mt-5">
-            <div class="col-md-12 no-ssr-placeholder">
+            <div class="col-md-12">
               <client-only placeholder="Loading...">
                 <label class="control-label">Rango de fecha y hora:</label>
                 <date-picker
@@ -112,7 +114,8 @@
               </client-only>
             </div>
             <div class="col-md-12 mt-2">
-              <button @click.prevent="getRangoFechaHora()">Get rango fecha y hora</button>
+              <button data-toggle="button" class="btn btn-primary btn-outline" type="button" @click.prevent="getRangoFechaHora()">Get rango fecha y hora</button>
+              <button data-toggle="button" class="btn btn-success btn-facebook" type="button" @click.prevent="getRangoFechaHora()">Get rango fecha y hora</button>
             </div>
           </div>
         </div>
@@ -126,6 +129,9 @@ import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 import "vue2-datepicker/locale/es";
 import moment from "moment";
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
 
 export default {
   name: "fecha",
@@ -242,6 +248,12 @@ export default {
     };
   },
   methods: {
+    notBeforeToday(date) {
+      return date < today;
+    },
+    notAfterToday(date) {
+      return date > today;
+    },
     getFecha() {
       console.log("Fecha");
       console.log(this.date ? moment(this.date).format("LL") : "");
