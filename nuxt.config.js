@@ -28,7 +28,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  // plugins: [],
+  plugins: ["~/plugins/vuelidate.js"],
+  // plugins: [{ src: "~plugins/vuelidate", ssr: false }],
+
   /*
    ** Nuxt.js dev-modules
    */
