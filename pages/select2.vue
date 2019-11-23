@@ -70,22 +70,28 @@
                             </div>
                         </div>
                     </div>
-                    <p>
-                        Use any of the available button classes to quickly create a styled button.
-                    </p>
 
-                    <h3 class="font-bold">
-                        Normal buttons
-                    </h3>
-                    <p>
-                        <button type="button" class="btn btn-w-m btn-default">Default</button>
-                        <button type="button" class="btn btn-w-m btn-primary">Primary</button>
-                        <button type="button" class="btn btn-w-m btn-success">Success</button>
-                        <button type="button" class="btn btn-w-m btn-info">Info</button>
-                        <button type="button" class="btn btn-w-m btn-warning" @click="getFruta()">Warning mostrar el registro seleccionado</button>
-                        <button type="button" class="btn btn-w-m btn-danger">Danger</button>
-                        <button type="button" class="btn btn-w-m btn-link">Link</button>
-                    </p>
+                    <div class="d-none d-md-block">
+                        <div class="row">
+                            <p>
+                                Use any of the available button classes to quickly create a styled button.
+                            </p>
+
+                            <h3 class="font-bold">
+                                Normal buttons
+                            </h3>
+                            <p>
+                                <button type="button" class="btn btn-w-m btn-default">Default</button>
+                                <button type="button" class="btn btn-w-m btn-primary">Primary</button>
+                                <button type="button" class="btn btn-w-m btn-success">Success</button>
+                                <button type="button" class="btn btn-w-m btn-info">Info</button>
+                                <button type="button" class="btn btn-w-m btn-warning" @click="getFruta()">Warning mostrar el registro seleccionado</button>
+                                <button type="button" class="btn btn-w-m btn-danger">Danger</button>
+                                <button type="button" class="btn btn-w-m btn-link">Link</button>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
