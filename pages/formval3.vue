@@ -11,10 +11,10 @@
         <div>
           <ul>
             <li>
-              <a href="#" @click.prevent="$v.form.$touch()">Touch validar</a>
+              <a name="even1" href="#" @click.prevent="$v.form.$touch()">Touch validar</a>
             </li>
             <li>
-              <a href="#" @click.prevent="$v.form.$reset()">Reset</a>
+              <a name="even2" href="#" @click.prevent="$v.form.$reset()">Reset</a>
             </li>
           </ul>
         </div>

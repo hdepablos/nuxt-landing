@@ -1,0 +1,6 @@
+-- Heroku
+https://vueschool.io/lessons/how-to-deploy-nuxtjs-to-heroku
+
+NPM_CONFIG_PRODUCTION   false
+HOST                    0.0.0.0
+NODE_ENV                production

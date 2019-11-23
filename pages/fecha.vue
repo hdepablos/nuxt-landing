@@ -256,6 +256,8 @@ export default {
     },
     getFecha() {
       console.log("Fecha");
+      console.log(this.date);
+      
       console.log(this.date ? moment(this.date).format("LL") : "");
     },
     setFecha() {

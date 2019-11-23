@@ -29,7 +29,12 @@ export default {
    ** Plugins to load before mounting the App
    */
   // plugins: [],
-  plugins: ["~/plugins/vuelidate.js"],
+  plugins: [
+    // {src: '~/plugins/vuelidate.js', ssr: false},
+    '~/plugins/vuelidate.js',
+    {src: '~plugins/vue-select.js', ssr: false}
+  ],
+
   // plugins: [{ src: "~plugins/vuelidate", ssr: false }],
 
   /*
@@ -64,6 +69,12 @@ export default {
         includeCss: true
       }
     ],
+
+    // Para select2
+    'nuxt-vue-select',
+
+    // With options
+    ['nuxt-vue-select', { /* module options */ }],
 
     // // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios"

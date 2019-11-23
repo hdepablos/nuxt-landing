@@ -1,0 +1,17 @@
+
+// .select2-selection--multiple
+.has-error .vs__dropdown-toggle {
+    border: 1px solid $red;
+}
+
+.has-error .vs__open-indicator{
+    fill: $red;
+}
+
+.has-error .v-select, .has-error .v-select * {
+    fill: $red;
+    // background-color: #f2dede;
+    color: $red;
+}
+
+

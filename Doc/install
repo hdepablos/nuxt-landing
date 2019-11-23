@@ -53,8 +53,5 @@ npm install vuelidate -S
 npm i vuelidate-error-extractor -S
 
 
--- Heroku
-https://vueschool.io/lessons/how-to-deploy-nuxtjs-to-heroku
-
 install:
     curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
