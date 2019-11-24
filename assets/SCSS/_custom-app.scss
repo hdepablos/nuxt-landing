@@ -1,4 +1,3 @@
-
 // .select2-selection--multiple
 .has-error .vs__dropdown-toggle {
     border: 1px solid $red;
@@ -14,4 +13,81 @@
     color: $red;
 }
 
+// Notificaciones
+.vue-notification {
+    padding: 10px;
+    margin: 0 5px 5px;
+  
+    font-size: 12px;
 
+    background: #d9edf7 !important;
+    border-left-color: #31708f !important;
+    color: #31708f !important;
+    border-right: 2px solid #31708f;
+    border-bottom: 2px solid #31708f;
+    border-top: 2px solid #31708f;
+  
+    &.warn {
+        background: #FCF8E3 !important;
+        border-left-color: #8A6D3B !important;
+        color: #8A6D3B !important;
+        border-right: 2px solid #8A6D3B;
+        border-bottom: 2px solid #8A6D3B;
+        border-top: 2px solid #8A6D3B;
+    }
+  
+    &.error {
+        background: #ebccd1 !important;
+        border-left-color: #a94442 !important;
+        color: #a94442 !important;
+        border-right: 2px solid #a94442;
+        border-bottom: 2px solid #a94442;
+        border-top: 2px solid #a94442;
+    }
+  
+    &.success {
+        background: #c2dfc3 !important;
+        border-left-color: #3c764d !important;
+        color: #3c764d !important;
+        border-right: 2px solid #3c764d;
+        border-bottom: 2px solid #3c764d;
+        border-top: 2px solid #3c764d;
+    }
+
+
+  }
+
+
+// .notifications-vue {
+//     // Style of the notification itself
+  
+//     .notification-title {
+//       // Style for title line
+//       background: darkcyan;
+//     }
+  
+//     .notification-content {
+//       // Style for content
+//       background: darkcyan;
+
+//     }
+  
+//     &.warn {
+//       background: #FCF8E3 !important;
+//       border-left-color: #8A6D3B !important;
+//       color: #8A6D3B !important;
+//       // --msg-war-border: #8A6D3B;
+//       // --msg-war: #FCF8E3;
+
+//     }
+  
+//     &.error {
+//       background: #E54D42;
+//       border-left-color: #B82E24;
+//     }
+  
+//     &.success {
+//       background: #68CD86;
+//       border-left-color: #42A85F;
+//     }
+//   }

@@ -30,16 +30,16 @@ export default {
    */
   // plugins: [],
   plugins: [
-    // {src: '~/plugins/vuelidate.js', ssr: false},
     '~/plugins/vuelidate.js',
     '~/plugins/vue-tables.js',
+    '~/plugins/vue-input-mask.js',
+    
+    {src: '~/plugins/vue-notification.js', ssr: false},
 
     {src: '~plugins/vue-select.js', ssr: false},
     { src: '~/plugins/amCharts.js', ssr: false },
     
   ],
-
-  // plugins: [{ src: "~plugins/vuelidate", ssr: false }],
 
   /*
    ** Nuxt.js dev-modules
@@ -62,6 +62,8 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
 
+    // // 
+    // '@nuxtjs/font-awesome',
     // // Simple usage
     "qonfucius-nuxt-fontawesome",
     // // With options
@@ -81,7 +83,9 @@ export default {
     ['nuxt-vue-select', { /* module options */ }],
 
     // // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+
+
   ],
   /*
    ** Axios module configuration
@@ -144,5 +148,6 @@ export default {
   // Configuración del moment español
   moment: {
     locales: ["es"]
-  }
+  },
+
 };

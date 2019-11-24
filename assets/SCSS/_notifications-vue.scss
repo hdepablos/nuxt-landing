@@ -1,0 +1,30 @@
+.notifications-vue {
+    // Style of the notification itself
+  
+    // .notification-title {
+    //   // Style for title line
+    // }
+  
+    // .notification-content {
+    //   // Style for content
+    // }
+  
+    &.warn {
+      background: #FCF8E3;
+      border-left-color: #8A6D3B;
+      color: #8A6D3B;
+      // --msg-war-border: #8A6D3B;
+      // --msg-war: #FCF8E3;
+
+    }
+  
+    &.error {
+      background: #E54D42;
+      border-left-color: #B82E24;
+    }
+  
+    &.success {
+      background: #68CD86;
+      border-left-color: #42A85F;
+    }
+  }

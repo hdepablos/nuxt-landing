@@ -23,10 +23,12 @@
                     </div>
                 </div>
                 <div class="ibox-content float-e-margins">
-                    <div class="row">
-                      <client-only>
-                        <v-client-table id="idtabla" name="idtabla" :data="tableData" :columns="columns" :options="options"></v-client-table>
-                      </client-only>
+                    <div class="row justify-content-md-center">
+                      <div class="col-md-10">
+                        <client-only>
+                          <v-client-table id="idtabla" name="idtabla" :data="tableData" :columns="columns" :options="options"></v-client-table>
+                        </client-only>
+                      </div>
                     </div>
                 </div>
             </div>
