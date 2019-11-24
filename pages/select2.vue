@@ -124,10 +124,9 @@
                 console.log(value);
             },
             getSelectedFruta(value){
-                console.log('Registro seleccionado, la fruta es:');
-                console.log(value);
-                console.log(value.text);
-                console.log(value.value);
+                if(value !== null){
+                    console.log(`La fruta es ${ value.text }, y el identificador es ${ value.value }`);
+                }
             },
             getFruta(){
                 console.log(`La fruta es ${ this.frutaSel.text }, y el identificador es ${ this.frutaSel.value }`);

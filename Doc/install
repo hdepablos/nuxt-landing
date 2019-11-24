@@ -59,3 +59,6 @@ install:
 
 -- Amchart
 npm i -S @amcharts/amcharts4
+
+-- vue-table2
+npm i -D vue-tables-2
