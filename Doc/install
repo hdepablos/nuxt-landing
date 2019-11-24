@@ -55,3 +55,7 @@ npm i vuelidate-error-extractor -S
 
 install:
     curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+
+-- Amchart
+npm i -S @amcharts/amcharts4

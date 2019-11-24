@@ -32,7 +32,8 @@ export default {
   plugins: [
     // {src: '~/plugins/vuelidate.js', ssr: false},
     '~/plugins/vuelidate.js',
-    {src: '~plugins/vue-select.js', ssr: false}
+    {src: '~plugins/vue-select.js', ssr: false},
+    { src: '~/plugins/amCharts.js', ssr: false }
   ],
 
   // plugins: [{ src: "~plugins/vuelidate", ssr: false }],
