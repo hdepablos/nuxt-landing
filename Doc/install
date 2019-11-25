@@ -69,4 +69,4 @@ npm i -S vue-notification
 
 
 -- inputmask
-npm i -S vue-inputmask
+npm i vue-imask
