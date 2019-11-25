@@ -46,8 +46,12 @@
                 <button type="button" class="btn btn-w-m btn-primary">
                   Primary
                 </button>
-                <button type="button" class="btn btn-w-m btn-success">
-                  Success
+                <button
+                  type="button"
+                  class="btn btn-w-m btn-success"
+                  @click.prevent="generarPdf"
+                >
+                  Generar pdf
                 </button>
                 <button type="button" class="btn btn-w-m btn-info">Info</button>
                 <button
@@ -67,6 +71,8 @@
 
           <div class="row">
             <div class="col-md-6">
+              <h3>Icono</h3>
+
               <h3>Input Mask moneda</h3>
               <imask-input
                 v-model="numberModel"
@@ -93,6 +99,7 @@
 
 <script>
 import { IMaskComponent } from "vue-imask";
+// import jspdf from 'jspdf';
 
 export default {
   data() {
@@ -107,27 +114,30 @@ export default {
     "imask-input": IMaskComponent
   },
   methods: {
+    generarPdf() {
+      console.log("generar pdf");
+    },
     getWar() {
       console.log("Esto es una prueba");
 
       this.$notify({
         group: "foot",
         type: "warn",
-        title: "Hello notify",
+        title: "&#9888; Hello notify",
         text: "Every are time now! :)"
       });
 
       this.$notify({
         group: "foot",
         type: "error",
-        title: "Hello notify",
+        title: "&#10008; Hello notify",
         text: "Every are time now! :)"
       });
 
       this.$notify({
         group: "foot",
         type: "success",
-        title: "Hello notify",
+        title: "&#10004; Hello notify",
         text: "Every are time now! :)"
       });
 
