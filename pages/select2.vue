@@ -164,11 +164,12 @@ export default {
       //     icon: 'error_outline'
       // });
 
-      this.$toast.success("message string", {
-        // override the global option
-        position: "top-right",
-        duration: 2500
-      });
+      // this.$toast.success("message string", {
+      //   // override the global option
+      //   position: "top-right",
+      //   duration: 2500
+      // });
+
       // this.$toast.error('Error while authenticating');
       // this.$toast.global.my_error();
       console.log(

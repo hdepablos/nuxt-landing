@@ -32,9 +32,9 @@ export default {
   plugins: [
     "~/plugins/vuelidate.js",
     "~/plugins/vue-tables.js",
-    // "~/plugins/inputMask.js",
-    { src: "~/plugins/vue-notification.js", ssr: false },
 
+    { src: "~/plugins/inspinia.js", ssr: false },
+    { src: "~/plugins/vue-notification.js", ssr: false },
     { src: "~plugins/vue-select.js", ssr: false },
     { src: "~/plugins/amCharts.js", ssr: false }
   ],

@@ -16,7 +16,6 @@ npm install --save vue2-animate
 -- jquery
 npm i jquery@1.9.1 --save
 
-
 npm i nuxt-fontawesome
 npm i @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome
 npm i @fortawesome/free-solid-svg-icons
