@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!-- <client-only> -->
-			<allseasons-promociones></allseasons-promociones>
+			<!-- <allseasons-promociones></allseasons-promociones> -->
 		<!-- </client-only> -->
 	</div>
 </template>
