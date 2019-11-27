@@ -134,6 +134,7 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 export default {
+  layout: 'app-menu',
   name: "fecha",
   components: {
     DatePicker

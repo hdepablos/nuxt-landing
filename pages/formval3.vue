@@ -84,10 +84,11 @@
 <script>
 import { required, email } from "vuelidate/lib/validators";
 import VuelidateErrorExtractor, { templates } from "vuelidate-error-extractor";
-
 import { isNameJoe } from "@/validators";
 
 export default {
+  layout: 'app-menu',
+
   name: "FormComponent",
 
   // components: { NameComponent, EmailComponent },

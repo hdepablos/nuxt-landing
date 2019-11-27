@@ -102,6 +102,7 @@ import { IMaskComponent } from "vue-imask";
 // import jspdf from 'jspdf';
 
 export default {
+  layout: 'app-menu',
   data() {
     return {
       numberModel: "",
