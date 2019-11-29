@@ -37,7 +37,12 @@
                   />Select 2 sencillo básico y evento al change
                 </label>
                 <client-only>
-                  <v-select name="sel1" id="sel1" :options="options" @input="setSelected" />
+                  <v-select
+                    name="sel1"
+                    id="sel1"
+                    :options="options"
+                    @input="setSelected"
+                  />
                 </client-only>
               </div>
             </div>
@@ -70,28 +75,40 @@
 
           <div class="row">
             <div class="col-md-4">
-              <label>Select 2 multiple sencillo básico y evento al change</label>
+              <label
+                >Select 2 multiple sencillo básico y evento al change</label
+              >
               <client-only>
-                <v-select multiple name="sel4" id="sel4" :options="options" @input="setSelected" />
+                <v-select
+                  multiple
+                  name="sel4"
+                  id="sel4"
+                  :options="options"
+                  @input="setSelected"
+                />
               </client-only>
             </div>
             <div class="col-md-4">
               <div class="form-group has-error">
-                <label
-                  class="control-label"
-                  for="sel5"
-                >Select 2 multiple sencillo básico y evento al change</label>
+                <label class="control-label" for="sel5"
+                  >Select 2 multiple sencillo básico y evento al change</label
+                >
                 <client-only>
-                  <v-select multiple name="sel5" id="sel5" :options="options" @input="setSelected" />
+                  <v-select
+                    multiple
+                    name="sel5"
+                    id="sel5"
+                    :options="options"
+                    @input="setSelected"
+                  />
                 </client-only>
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group has-error">
-                <label
-                  class="control-label"
-                  for="sel6"
-                >Select 2 multiple sencillo básico y evento al change</label>
+                <label class="control-label" for="sel6"
+                  >Select 2 multiple sencillo básico y evento al change</label
+                >
                 <client-only>
                   <v-select multiple name="sel6" id="sel6" :options="options" />
                 </client-only>
@@ -102,21 +119,38 @@
           <div class="d-none d-md-block">
             <div class="row">
               <div class="col-md-12">
-                <p>Use any of the available button classes to quickly create a styled button.</p>
+                <p>
+                  Use any of the available button classes to quickly create a
+                  styled button.
+                </p>
 
                 <h3 class="font-bold">Normal buttons</h3>
                 <p>
-                  <button type="button" class="btn btn-w-m btn-default">Default</button>
-                  <button type="button" class="btn btn-w-m btn-primary">Primary</button>
-                  <button type="button" class="btn btn-w-m btn-success">Success</button>
-                  <button type="button" class="btn btn-w-m btn-info">Info</button>
+                  <button type="button" class="btn btn-w-m btn-default">
+                    Default
+                  </button>
+                  <button type="button" class="btn btn-w-m btn-primary">
+                    Primary
+                  </button>
+                  <button type="button" class="btn btn-w-m btn-success">
+                    Success
+                  </button>
+                  <button type="button" class="btn btn-w-m btn-info">
+                    Info
+                  </button>
                   <button
                     type="button"
                     class="btn btn-w-m btn-warning"
                     @click="getFruta()"
-                  >Warning mostrar el registro seleccionado</button>
-                  <button type="button" class="btn btn-w-m btn-danger">Danger</button>
-                  <button type="button" class="btn btn-w-m btn-link">Link</button>
+                  >
+                    Warning mostrar el registro seleccionado
+                  </button>
+                  <button type="button" class="btn btn-w-m btn-danger">
+                    Danger
+                  </button>
+                  <button type="button" class="btn btn-w-m btn-link">
+                    Link
+                  </button>
                 </p>
               </div>
             </div>
@@ -129,6 +163,7 @@
 
 <script>
 export default {
+  layout: "app-menu",
   data() {
     return {
       algo: "prueba",
@@ -180,5 +215,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

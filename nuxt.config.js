@@ -37,7 +37,7 @@ export default {
     //   src: "~/plugins/dist/allseasons-promociones/allseasons-promociones.js",
     //   ssr: false
     // },
-    { src: "~/plugins/inspinia.js", ssr: false },
+    // { src: "~/plugins/inspinia.js", ssr: false },
     { src: "~/plugins/vue-notification.js", ssr: false },
     { src: "~plugins/vue-select.js", ssr: false },
     { src: "~/plugins/amCharts.js", ssr: false }

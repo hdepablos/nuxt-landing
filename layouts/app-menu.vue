@@ -878,7 +878,63 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted(){
+    // fix_height();
+
+    // setTimeout(() => {
+      if (!document.body.classList.contains("body-small")) {
+          // fix_height();
+
+          // Dimensionar los formularios
+          const heightWithoutNavbar = document.querySelector('#wrapper').offsetHeight - 62;
+          const navbarheight = document.querySelector('nav.navbar-default').offsetHeight;
+          const wrapperHeight = document.querySelector('#page-wrapper').offsetHeight;
+          if (navbarheight > wrapperHeight) {
+            document.getElementById('page-wrapper').style.minHeight = navbarheight + 'px';
+          }
+      }
+    // });
+
+    
+    // Add click toogle menu
+    const toogleMenu = document.querySelector('.navbar-minimalize');
+    toogleMenu.addEventListener("click", () => {
+      // if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+      if (document.body.classList.contains("mini-navbar") || document.body.classList.contains("body-small")) {
+        // $('#side-menu').hide();
+        console.log('S1');
+        document.querySelector('#side-menu').hide();
+
+        // const el = document.querySelectorAll(".ver-criterios-consulta");
+        // el.forEach(element => (element.style.display = "none"));
+
+        // const el = document.querySelectorAll(".ver-criterios-consulta");
+        // el.forEach(element => (element.style.display = "block"));
+      }else{
+        console.log('S1');
+        document.querySelector('#side-menu').hide();
+      }
+
+        // if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+        //   // Hide menu in order to smoothly turn on when maximize menu
+        //   $('#side-menu').hide();
+        //   // For smoothly turn on menu
+        //   setTimeout(function() {
+        //     $('#side-menu').fadeIn(400);
+        //   }, 200);
+        // } else if ($('body').hasClass('fixed-sidebar')) {
+        //   $('#side-menu').hide();
+        //   setTimeout(function() {
+        //     $('#side-menu').fadeIn(400);
+        //   }, 100);
+        // } else {
+        //   // Remove all inline style from jquery fadeIn function to reset menu state
+        //   $('#side-menu').removeAttr('style');
+        // }
+    });
+  }
+};
 </script>
 
 <style></style>

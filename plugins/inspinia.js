@@ -140,6 +140,9 @@ function fix_height() {
   const heightWithoutNavbar =
     document.querySelector("body > #wrapper").offsetHeight - 62;
 
+  console.log("valor:");
+  console.log(heightWithoutNavbar);
+
   // $('.sidebar-panel').css('min-height', heightWithoutNavbar + 'px');
   const el = document.querySelectorAll(".sidebar-panel");
   el.forEach(element => (element.style.minHeight = heightWithoutNavbar + "px"));
