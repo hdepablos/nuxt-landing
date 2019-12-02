@@ -3,10 +3,11 @@
     <div class="col-lg-12">
       <div class="ibox">
         <div class="ibox-title">
-          <h5>Colors buttons</h5>
+          <h5>Colors buttons xxx</h5>
           <div class="ibox-tools">
             <a class="collapse-link">
-              <i class="fa fa-chevron-up"></i>
+              <!-- <i class="fa fa-chevron-up"></i> -->
+              <i class="glyphicon glyphicon-chevron-up"></i>
             </a>
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
               <i class="fa fa-wrench"></i>
@@ -34,7 +35,10 @@
                     :icon="['fas', 'users']"
                     size="1x"
                     :style="{ color: 'blue' }"
-                  />Select 2 sencillo básico y evento al change
+                  />
+                  <fa-icon :icon="['fab', 'font-awesome']" />
+                  <fa-icon :icon="['fab', 'github']" />
+                  Select 2 sencillo básico y evento al change
                 </label>
                 <client-only>
                   <v-select

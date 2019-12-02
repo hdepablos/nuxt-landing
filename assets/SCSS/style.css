@@ -3825,7 +3825,7 @@ body.tour-open .animated {
   min-width: 150px; }
 
 .resizable-panels .ibox .ibox-content {
-  height: calc(~"100% - 49px"); }
+  height: calc("100% - 49px"); }
 
 .ui-resizable-helper {
   background: rgba(211, 211, 211, 0.4); }
@@ -5186,7 +5186,7 @@ body.fullscreen-ibox-mode {
   display: none; }
 
 .ibox.fullscreen .ibox-content {
-  min-height: calc(~"100% - 48px"); }
+  min-height: calc("100% - 48px"); }
 
 body.modal-open {
   padding-right: inherit !important; }

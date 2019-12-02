@@ -3,7 +3,7 @@
     <div id="wrapper">
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav metismenu" id="side-menu">
+                <ul class="nav metismenu menu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
                             <img alt="image" class="rounded-circle" src="~/assets/img/i-480.png" />
@@ -23,11 +23,16 @@
                             IN+
                         </div>
                     </li>
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span>
-                            <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li class="active"><a href="index.html">Dashboard v.1</a></li>
+
+                    <!-- Aqui van las opciones del menu -->
+                    <li>
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="glyphicon glyphicon-th"></i> 
+                            <span class="nav-label">Dashboards</span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu min" :transform="{ rotate: this.giro }"/>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li class="active"><a href="#">Dashboard v.1</a></li>
                             <li><a href="dashboard_2.html">Dashboard v.2</a></li>
                             <li><a href="dashboard_3.html">Dashboard v.3</a></li>
                             <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
@@ -35,11 +40,18 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
+                        <a href="layouts.html">
+                            <i class="glyphicon glyphicon-modal-window"></i>
+                            <span class="nav-label">Layouts</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Graphs</span><span
-                                class="fa arrow"></span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="glyphicon glyphicon-stats"></i> 
+                            <span class="nav-label">Graphs</span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                            <!-- <span class="fa arrow"></span> -->
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="graph_flot.html">Flot Charts</a></li>
                             <li><a href="graph_morris.html">Morris.js Charts</a></li>
@@ -52,8 +64,13 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox
-                            </span><span class="label label-warning float-right">16/24</span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="	glyphicon glyphicon-cloud-upload"></i> 
+                            <span class="nav-label">Mailbox
+                            </span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                            <span class="label label-warning float-right label-submenu">16/24</span>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="mailbox.html">Inbox</a></li>
                             <li><a href="mail_detail.html">Email view</a></li>
@@ -62,15 +79,22 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span>
+                        <a href="metrics.html">
+                            <i class="glyphicon glyphicon-signal"></i> 
+                            <span class="nav-label">Metrics</span>
                         </a>
                     </li>
                     <li>
-                        <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
+                        <a href="widgets.html">
+                            <i class="glyphicon glyphicon-list-alt"></i> 
+                            <span class="nav-label">Widgets</span></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span><span
-                                class="fa arrow"></span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="	glyphicon glyphicon-modal-window"></i> 
+                            <span class="nav-label">Forms</span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="form_basic.html">Basic form</a></li>
                             <li><a href="form_advanced.html">Advanced Plugins</a></li>
@@ -82,8 +106,12 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">App Views</span> <span
-                                class="float-right label label-primary">SPECIAL</span></a>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-phone"></i> 
+                            <span class="nav-label">App Views</span> 
+                            <span class="float-right label label-primary label-submenu">SPECIAL</span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="contacts.html">Contacts</a></li>
                             <li><a href="profile.html">Profile</a></li>
@@ -108,8 +136,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span><span
-                                class="fa arrow"></span></a>
+                       <a href="javascript:void(0);" class="sub-menu">
+                            <i class="fa fa-files-o"></i> 
+                            <span class="nav-label">Other Pages</span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="search_results.html">Search results</a></li>
                             <li><a href="lockscreen.html">Lockscreen</a></li>
@@ -124,8 +155,12 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Miscellaneous</span><span
-                                class="label label-info float-right">NEW</span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                        <i class="glyphicon glyphicon-gift"></i> 
+                        <span class="nav-label">Miscellaneous</span><span
+                            class="label label-info float-right label-submenu">NEW</span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="toastr_notifications.html">Notification</a></li>
                             <li><a href="nestable_list.html">Nestable list</a></li>
@@ -179,9 +214,11 @@
                         <a href="grid_options.html"><i class="fa fa-laptop"></i> <span class="nav-label">Grid
                                 options</span></a>
                     </li>
+                    
                     <li>
                         <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span
-                                class="fa arrow"></span></a>
+                            class="fa arrow"></span>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="table_basic.html">Static Tables</a></li>
                             <li><a href="table_data_tables.html">Data Tables</a></li>
@@ -189,6 +226,7 @@
                             <li><a href="jq_grid.html">jqGrid</a></li>
                         </ul>
                     </li>
+                    
                     <li>
                         <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">E-commerce</span><span
                                 class="fa arrow"></span></a>
@@ -202,6 +240,7 @@
                             <li><a href="ecommerce_payments.html">Credit Card form</a></li>
                         </ul>
                     </li>
+                    
                     <li>
                         <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">Gallery</span><span
                                 class="fa arrow"></span></a>
@@ -209,15 +248,18 @@
                             <li><a href="basic_gallery.html">Lightbox Gallery</a></li>
                             <li><a href="slick_carousel.html">Slick Carousel</a></li>
                             <li><a href="carousel.html">Bootstrap Carousel</a></li>
-
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Menu Levels </span><span
-                                class="fa arrow"></span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="fa fa-sitemap"></i> 
+                            <span class="nav-label">Menu Levels </span>
+                            <span class="fa arrow"></span>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li>
-                                <a href="#" id="damian">Third Level <span class="fa arrow"></span></a>
+                                <a href="javascript:void(0);" id="damian" class="sub-menu">
+                                    Third Level <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
                                         <a href="#">Third Level Item</a>
@@ -228,7 +270,6 @@
                                     <li>
                                         <a href="#">Third Level Item</a>
                                     </li>
-
                                 </ul>
                             </li>
                             <li><a href="#">Second Level Item</a></li>
@@ -251,7 +292,6 @@
                         <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
                     </li>
                 </ul>
-
             </div>
         </nav>
 
@@ -259,14 +299,15 @@
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
-                                class="fa fa-bars"></i> </a>
-                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                        </a>    
+                        <!-- <form role="search" class="navbar-form-custom" action="search_results.html">
                             <div class="form-group">
                                 <input type="text" placeholder="Search for something..." class="form-control"
                                     name="top-search" id="top-search">
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li style="padding: 20px">
@@ -274,7 +315,9 @@
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                                <!-- <i class="fa fa-envelope"></i>  -->
+                                <fa-icon :icon="['far', 'envelope']" size="1x" :style="{ color: '#999c9e' }"/>
+                                <span class="label label-warning">16</span>
                             </a>
                             <ul class="dropdown-menu dropdown-messages dropdown-menu-right">
                                 <li>
@@ -327,68 +370,73 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-alerts">
-                                <li>
-                                    <a href="mailbox.html" class="dropdown-item">
-                                        <div>
-                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                            <span class="float-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="dropdown-divider"></li>
-                                <li>
-                                    <a href="profile.html" class="dropdown-item">
-                                        <div>
-                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                            <span class="float-right text-muted small">12 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="dropdown-divider"></li>
-                                <li>
-                                    <a href="grid_options.html" class="dropdown-item">
-                                        <div>
-                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                            <span class="float-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="dropdown-divider"></li>
-                                <li>
-                                    <div class="text-center link-block">
-                                        <a href="notifications.html" class="dropdown-item">
-                                            <strong>See All Alerts</strong>
-                                            <i class="fa fa-angle-right"></i>
+                            <!-- <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-alerts">
+                                    <li>
+                                        <a href="mailbox.html" class="dropdown-item">
+                                            <div>
+                                                <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                                <span class="float-right text-muted small">4 minutes ago</span>
+                                            </div>
                                         </a>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li>
+                                        <a href="profile.html" class="dropdown-item">
+                                            <div>
+                                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                                <span class="float-right text-muted small">12 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li>
+                                        <a href="grid_options.html" class="dropdown-item">
+                                            <div>
+                                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                                <span class="float-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="notifications.html" class="dropdown-item">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        <li>
+                            <a href="bloquear.html">
+                                <fa-icon :icon="['fas', 'lock']" size="1x" :style="{ color: '#999c9e' }"/>
+                            </a>
                         </li>
-
-
                         <li>
                             <a href="login.html">
-                                <i class="fa fa-sign-out"></i> Log out
+                                <fa-icon :icon="['fas', 'user-cog']" size="1x" :style="{ color: '#999c9e' }"/>
                             </a>
                         </li>
+                        
                         <li>
-                            <a class="right-sidebar-toggle">
-                                <i class="fa fa-tasks"></i>
+                            <!-- <a class="right-sidebar-toggle"> -->
+                            <a class="">
+                                <!-- <fa-icon :icon="['fab', 'readme']" size="2x" :style="{ color: '#999c9e' }"/> -->
+                                <!-- <i class="fa fa-tasks"></i> -->
+                                <fa-icon :icon="['fas', 'sign-out-alt']" size="1x" :style="{ color: '#999c9e' }"/>
+                                Salir
                             </a>
                         </li>
                     </ul>
-
                 </nav>
             </div>
 
             <nuxt/>
-
-            
 
             <div class="footer">
                 <div class="float-right">
@@ -879,42 +927,240 @@
 
 <script>
 export default {
+    data() {
+        return {
+            giro: 90,
+        }
+    },
+    methods:{
+        fix_height(){
+           console.log('si esta entrando');
+            const heightWithoutNavbar = document.querySelector('#wrapper').offsetHeight - 62;
+            const navbarheight = document.querySelector('nav.navbar-default').offsetHeight;
+            const wrapperHeight = document.querySelector('#page-wrapper').offsetHeight;
+            
+            const el = document.querySelectorAll(".sidebar-panel");
+            el.forEach(element => (element.style.minHeight = `${ navbarheight }px`));
+            
+            if (navbarheight > wrapperHeight) {
+                document.getElementById('page-wrapper').style.minHeight = `${navbarheight}px`;
+            }
+
+            if (navbarheight < wrapperHeight) {
+                document.getElementById('page-wrapper').style.minHeight = `${ window.innerWidth() }px`; 
+            }
+
+            // if ($('body').hasClass('fixed-nav')) {
+            if (document.body.classList.contains("fixed-nav")) {
+                if (navbarheight > wrapperHeight) {
+                    // $('#page-wrapper').css('min-height', navbarheight + 'px');
+                    document.getElementById('page-wrapper').style.minHeight = `${ navbarheight }px`; 
+                } else {
+                    // $('#page-wrapper').css('min-height', $(window).height() - 60 + 'px');
+                    document.getElementById('page-wrapper').style.minHeight = `${ (window.innerWidth() - navbarheight) }px`; 
+                }
+            }
+        },
+        smoothlyMenu(){
+           	// if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+            //     // Hide menu in order to smoothly turn on when maximize menu
+            //     $('#side-menu').hide();
+            //     // For smoothly turn on menu
+            //     setTimeout(function() {
+            //         $('#side-menu').fadeIn(400);
+            //     }, 200);
+            // } else if ($('body').hasClass('fixed-sidebar')) {
+            //     $('#side-menu').hide();
+            //     setTimeout(function() {
+            //         $('#side-menu').fadeIn(400);
+            //     }, 100);
+            // } else {
+            //     // Remove all inline style from jquery fadeIn function to reset menu state
+            //     $('#side-menu').removeAttr('style');
+            // }
+
+            if (!document.body.classList.contains("mini-navbar") || document.body.classList.contains("body-small")) {
+                // $('#side-menu').hide();
+                console.log('S1 5465654');
+                document.getElementById('side-menu').hide();
+                // const el = document.querySelectorAll("#side-menu");
+                // el.forEach(element => (element.style.display = "none"));
+
+                // document.querySelector('#side-menu').hide();
+                // const el = document.querySelectorAll(".ver-criterios-consulta");
+                // el.forEach(element => (element.style.display = "none"));
+
+                // const el = document.querySelectorAll(".ver-criterios-consulta");
+                // el.forEach(element => (element.style.display = "block"));
+            }else{
+                console.log('S1 ****');
+                // const el = document.querySelectorAll("#side-menu");
+                // el.forEach(element => (element.style.display = "none"));
+                // document.querySelector('#side-menu').hide();
+            }
+        }
+    } , 
   mounted(){
-    // fix_height();
+        const w = window.innerWidth;
+        const body = document.body;
+        
+        if (window.innerWidth < 769) {
+            body.classList.add("body-small");
+        } else {
+            body.classList.remove("body-small")
+        }
 
-    // setTimeout(() => {
-      if (!document.body.classList.contains("body-small")) {
-          // fix_height();
+        this.fix_height();
 
-          // Dimensionar los formularios
-          const heightWithoutNavbar = document.querySelector('#wrapper').offsetHeight - 62;
-          const navbarheight = document.querySelector('nav.navbar-default').offsetHeight;
-          const wrapperHeight = document.querySelector('#page-wrapper').offsetHeight;
-          if (navbarheight > wrapperHeight) {
-            document.getElementById('page-wrapper').style.minHeight = navbarheight + 'px';
-          }
-      }
-    // });
+        // // Add click toogle menu
+        const toogleMenu = document.querySelector('.navbar-minimalize');
+        toogleMenu.addEventListener("click", () => {
+            document.body.classList.toggle('mini-navbar');
+            // SmoothlyMenu();
+        });
 
+    // Add click a item en menu
+    // const el = document.querySelectorAll(".sidebar-panel");
+    // var container = document.querySelector("#test");
+    // var matches = container.querySelectorAll("div.highlighted > p");
     
-    // Add click toogle menu
-    const toogleMenu = document.querySelector('.navbar-minimalize');
-    toogleMenu.addEventListener("click", () => {
-      // if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
-      if (document.body.classList.contains("mini-navbar") || document.body.classList.contains("body-small")) {
-        // $('#side-menu').hide();
-        console.log('S1');
-        document.querySelector('#side-menu').hide();
+    const menu = document.querySelector("#test");
+    const itemMenu = document.querySelectorAll(".sub-menu");
+    console.log('itemMenu');
+    console.log(itemMenu);
+    console.log(itemMenu.length);
+    const listArray = Array.from(itemMenu);
+    console.log(listArray);
+    listArray.forEach((item) => {console.log(item)});
+    console.log('FIN itemMenu');
 
-        // const el = document.querySelectorAll(".ver-criterios-consulta");
-        // el.forEach(element => (element.style.display = "none"));
+    itemMenu.forEach(element => (
+        element.addEventListener("click", (e) => {
+            e.preventDefault();
+            const vli = e.target.closest('li');
+            if (vli) {
+                const vul = vli.querySelector('ul');
+                
+                vul.classList.toggle("collapse");
+            }
+            // const selector = 'li';
+            // event.target.closest('button');
+            // if(e.target.match(selector)){
+            //     console.log('si esssssssssssssssssssssssssssssss');
+                
+            // }
 
-        // const el = document.querySelectorAll(".ver-criterios-consulta");
-        // el.forEach(element => (element.style.display = "block"));
-      }else{
-        console.log('S1');
-        document.querySelector('#side-menu').hide();
-      }
+            // if(e.target.match(selector)){
+            //     console.log('si es li');
+                
+            // } 
+
+            // let rootElement = document.querySelector('body');
+            // rootElement.addEventListener('click',function(event){
+            //     let targetElement = event.target
+            //     let selector = 'li';
+            //     if(targetElement.match(selector) {
+            //         //logic for handling the click event of li tag
+            //     }
+            // },true);
+
+            // const listItems = document.querySelector('ul').children;
+            // const listArray = Array.from(listItems);
+            // listArray.forEach((item) => {console.log(item)});
+            
+            // for ( ; elem && elem !== document; elem = elem.parentNode ) {
+            //     if ( elem.matches( selector ) ) return elem;
+            // }
+
+            // document.body.classList.toggle('mini-navbar');
+            // SmoothlyMenu();
+        })
+    ));
+    // itemMenu.addEventListener("click", () => {
+    //     console.log('Desplegar menu');
+    //     // document.body.classList.toggle('mini-navbar');
+    //     // SmoothlyMenu();
+    // });
+    // Click en los item de los menu
+
+    //   // if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+    //   if (document.body.classList.contains("mini-navbar") || document.body.classList.contains("body-small")) {
+    //     // $('#side-menu').hide();
+    //     console.log('S1 5465654');
+
+    //     const el = document.querySelectorAll("#side-menu");
+    //     el.forEach(element => (element.style.display = "none"));
+
+    //     // document.querySelector('#side-menu').hide();
+    //     // const el = document.querySelectorAll(".ver-criterios-consulta");
+    //     // el.forEach(element => (element.style.display = "none"));
+
+    //     // const el = document.querySelectorAll(".ver-criterios-consulta");
+    //     // el.forEach(element => (element.style.display = "block"));
+    //   }else{
+    //     console.log('S1 ****');
+    //     const el = document.querySelectorAll("#side-menu");
+    //     el.forEach(element => (element.style.display = "none"));
+    //     // document.querySelector('#side-menu').hide();
+    //   }
+
+    //     if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+    //       // Hide menu in order to smoothly turn on when maximize menu
+    //       $('#side-menu').hide();
+    //       // For smoothly turn on menu
+    //       setTimeout(function() {
+    //         $('#side-menu').fadeIn(400);
+    //       }, 200);
+    //     } else if ($('body').hasClass('fixed-sidebar')) {
+    //       $('#side-menu').hide();
+    //       setTimeout(function() {
+    //         $('#side-menu').fadeIn(400);
+    //       }, 100);
+    //     } else {
+    //       // Remove all inline style from jquery fadeIn function to reset menu state
+    //       $('#side-menu').removeAttr('style');
+    //     }
+    // });
+ 
+        // Cerrar Formulario
+        // Collapse ibox function
+        // $('.collapse-link').on('click', function(e) {
+        //     e.preventDefault();
+        //     var ibox = $(this).closest('div.ibox');
+        //     var button = $(this).find('i');
+        //     var content = ibox.children('.ibox-content');
+        //     content.slideToggle(200);
+        //     button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
+        //     ibox.toggleClass('').toggleClass('border-bottom');
+        //     setTimeout(function() {
+        //         ibox.resize();
+        //         ibox.find('[id^=map-]').resize();
+        //     }, 50);
+        // });
+        
+    // // Add click toogle menu
+    // const toogleMenu = document.querySelector('.navbar-minimalize');
+    // toogleMenu.addEventListener("click", () => {
+    //   // if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
+    //   if (document.body.classList.contains("mini-navbar") || document.body.classList.contains("body-small")) {
+    //     // $('#side-menu').hide();
+    //     console.log('S1 5465654');
+
+    //     const el = document.querySelectorAll("#side-menu");
+    //     el.forEach(element => (element.style.display = "none"));
+
+    //     // document.querySelector('#side-menu').hide();
+    //     // const el = document.querySelectorAll(".ver-criterios-consulta");
+    //     // el.forEach(element => (element.style.display = "none"));
+
+    //     // const el = document.querySelectorAll(".ver-criterios-consulta");
+    //     // el.forEach(element => (element.style.display = "block"));
+    //   }else{
+    //     console.log('S1 ****');
+    //     const el = document.querySelectorAll("#side-menu");
+    //     el.forEach(element => (element.style.display = "none"));
+    //     // document.querySelector('#side-menu').hide();
+    //   }
 
         // if (!$('body').hasClass('mini-navbar') || $('body').hasClass('body-small')) {
         //   // Hide menu in order to smoothly turn on when maximize menu
@@ -932,9 +1178,45 @@ export default {
         //   // Remove all inline style from jquery fadeIn function to reset menu state
         //   $('#side-menu').removeAttr('style');
         // }
-    });
+    // });
   }
 };
 </script>
 
-<style></style>
+<style>
+.icon-sub-menu{
+    /* color:blue; */
+    /* text-align: right; */
+    position: absolute;
+    right: 15px;
+}
+
+body.mini-navbar .icon-sub-menu {
+  display: none;
+}
+
+.label-submenu{
+    margin-right: 9px;
+}
+
+/* fa-icon .min-menu{
+
+}
+
+fa-icon .max-menu{
+
+} */
+
+.rotate{
+    -moz-transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    transition: all 2s linear;
+}
+
+.rotate.down{
+    -ms-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+</style>

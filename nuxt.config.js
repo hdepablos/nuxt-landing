@@ -33,6 +33,8 @@ export default {
     "~/plugins/vuelidate.js",
     "~/plugins/vue-tables.js",
 
+    // "~/plugins/fontawesome-free-5.11.2/",
+
     // {
     //   src: "~/plugins/dist/allseasons-promociones/allseasons-promociones.js",
     //   ssr: false
@@ -115,6 +117,10 @@ export default {
         // fas
         package: "@fortawesome/free-solid-svg-icons",
         icons: [
+          "faAngleDown",
+          "faLock",
+          "faUserCog",
+          "faSignOutAlt",
           "faUsers",
           "faUserPlus",
           "faCameraRetro",
@@ -145,7 +151,7 @@ export default {
       {
         // far
         package: "@fortawesome/free-regular-svg-icons",
-        icons: ["faSun"]
+        icons: ["faSun", "faEnvelope"]
       }
     ]
   },
