@@ -106,8 +106,8 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-phone"></i> 
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="glyphicon glyphicon-phone"></i>
                             <span class="nav-label">App Views</span> 
                             <span class="float-right label label-primary label-submenu">SPECIAL</span>
                             <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
@@ -137,7 +137,7 @@
                     </li>
                     <li>
                        <a href="javascript:void(0);" class="sub-menu">
-                            <i class="fa fa-files-o"></i> 
+                            <i class="glyphicon glyphicon-equalizer"></i> 
                             <span class="nav-label">Other Pages</span>
                             <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
                         </a>
@@ -156,9 +156,9 @@
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="sub-menu">
-                        <i class="glyphicon glyphicon-gift"></i> 
-                        <span class="nav-label">Miscellaneous</span><span
-                            class="label label-info float-right label-submenu">NEW</span>
+                            <i class="glyphicon glyphicon-gift"></i> 
+                            <span class="nav-label">Miscellaneous</span>
+                            <span class="label label-info float-right label-submenu">NEW</span>
                             <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
                         </a>
                         <ul class="nav nav-second-level collapse">
@@ -193,8 +193,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI Elements</span><span
-                                class="fa arrow"></span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                          <i class="glyphicon glyphicon-folder-open"></i> 
+                          <span class="nav-label">UI Elements</span>
+                          <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="typography.html">Typography</a></li>
                             <li><a href="icons.html">Icons</a></li>
@@ -211,13 +214,17 @@
                     </li>
 
                     <li>
-                        <a href="grid_options.html"><i class="fa fa-laptop"></i> <span class="nav-label">Grid
-                                options</span></a>
+                        <a href="grid_options.html">
+                          <i class="glyphicon glyphicon-th"></i> 
+                          <span class="nav-label">Grid options</span>
+                        </a>
                     </li>
                     
                     <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span
-                            class="fa arrow"></span>
+                        <a href="javascript:void(0);" class="sub-menu">
+                          <i class="glyphicon glyphicon-list-alt"></i> 
+                          <span class="nav-label">Tables</span>
+                          <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
                         </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="table_basic.html">Static Tables</a></li>
@@ -228,8 +235,12 @@
                     </li>
                     
                     <li>
-                        <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">E-commerce</span><span
-                                class="fa arrow"></span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="glyphicon glyphicon-usd"></i> 
+                            <span class="nav-label">E-commerce</span>
+                            <!-- <span class="fa arrow"></span> -->
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="ecommerce_products_grid.html">Products grid</a></li>
                             <li><a href="ecommerce_product_list.html">Products list</a></li>
@@ -242,8 +253,11 @@
                     </li>
                     
                     <li>
-                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">Gallery</span><span
-                                class="fa arrow"></span></a>
+                        <a href="javascript:void(0);" class="sub-menu">
+                            <i class="glyphicon glyphicon-gift"></i> 
+                            <span class="nav-label">Gallery</span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                        </a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="basic_gallery.html">Lightbox Gallery</a></li>
                             <li><a href="slick_carousel.html">Slick Carousel</a></li>
@@ -252,14 +266,16 @@
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="sub-menu">
-                            <i class="fa fa-sitemap"></i> 
+                            <i class="glyphicon glyphicon-indent-right"></i>
                             <span class="nav-label">Menu Levels </span>
-                            <span class="fa arrow"></span>
+                            <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
                         </a>
                         <ul class="nav nav-second-level collapse">
                             <li>
                                 <a href="javascript:void(0);" id="damian" class="sub-menu">
-                                    Third Level <span class="fa arrow"></span></a>
+                                    <span class="nav-label">Third Level</span>
+                                    <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
+                                </a>
                                 <ul class="nav nav-third-level">
                                     <li>
                                         <a href="#">Third Level Item</a>
