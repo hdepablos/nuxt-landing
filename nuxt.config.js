@@ -30,6 +30,7 @@ export default {
    */
   // plugins: [],
   plugins: [
+    { src: "~/plugins/slick.js", ssr: false },
     "~/plugins/vuelidate.js",
     "~/plugins/vue-tables.js",
 

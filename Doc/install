@@ -66,6 +66,7 @@ npm i -D vue-tables-2
 -- toasted
 npm i -S vue-notification
 
-
 -- inputmask
 npm i vue-imask
+
+

@@ -996,9 +996,9 @@ export default {
             // }
 
             if (!document.body.classList.contains("mini-navbar") || document.body.classList.contains("body-small")) {
-                // $('#side-menu').hide();
-                console.log('S1 5465654');
-                document.getElementById('side-menu').hide();
+                $('#side-menu').hide();
+                // console.log('S1 5465654');
+                // document.getElementById('side-menu').hide();
                 // const el = document.querySelectorAll("#side-menu");
                 // el.forEach(element => (element.style.display = "none"));
 
