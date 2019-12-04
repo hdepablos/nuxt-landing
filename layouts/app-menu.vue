@@ -276,7 +276,7 @@
                                     <span class="nav-label">Third Level</span>
                                     <fa-icon :icon="['fas', 'angle-down']" class="icon-sub-menu"/>
                                 </a>
-                                <ul class="nav nav-third-level">
+                                <ul class="nav nav-third-level collapse" >
                                     <li>
                                         <a href="#">Third Level Item</a>
                                     </li>
@@ -955,20 +955,36 @@ export default {
             const navbarheight = document.querySelector('nav.navbar-default').offsetHeight;
             const wrapperHeight = document.querySelector('#page-wrapper').offsetHeight;
             
+            console.log('paso - 1');
+            
             const el = document.querySelectorAll(".sidebar-panel");
             el.forEach(element => (element.style.minHeight = `${ navbarheight }px`));
             
+            console.log('paso - 2');
+
             if (navbarheight > wrapperHeight) {
                 document.getElementById('page-wrapper').style.minHeight = `${navbarheight}px`;
             }
 
+
+            console.log('paso - 3');
+
             if (navbarheight < wrapperHeight) {
-                document.getElementById('page-wrapper').style.minHeight = `${ window.innerWidth() }px`; 
+                console.log('paso - 4');
+                console.log('innerWidth');
+                // console.log(window.innerWidth());
+                // $('#page-wrapper').css('min-height', navbarheight + 'px');
+                document.getElementById('page-wrapper').style.minHeight = `${ navbarheight }px`; 
             }
+
+            console.log('paso - 5');
 
             // if ($('body').hasClass('fixed-nav')) {
             if (document.body.classList.contains("fixed-nav")) {
+                console.log('paso - 6');
+
                 if (navbarheight > wrapperHeight) {
+                    console.log('paso - 7');
                     // $('#page-wrapper').css('min-height', navbarheight + 'px');
                     document.getElementById('page-wrapper').style.minHeight = `${ navbarheight }px`; 
                 } else {
@@ -996,8 +1012,8 @@ export default {
             // }
 
             if (!document.body.classList.contains("mini-navbar") || document.body.classList.contains("body-small")) {
-                $('#side-menu').hide();
-                // console.log('S1 5465654');
+                // $('#side-menu').hide();
+                console.log('S1 5465654');
                 // document.getElementById('side-menu').hide();
                 // const el = document.querySelectorAll("#side-menu");
                 // el.forEach(element => (element.style.display = "none"));
@@ -1032,6 +1048,7 @@ export default {
         const toogleMenu = document.querySelector('.navbar-minimalize');
         toogleMenu.addEventListener("click", () => {
             document.body.classList.toggle('mini-navbar');
+            this.fix_height();
             // SmoothlyMenu();
         });
 
@@ -1056,8 +1073,8 @@ export default {
             const vli = e.target.closest('li');
             if (vli) {
                 const vul = vli.querySelector('ul');
-                
                 vul.classList.toggle("collapse");
+                this.fix_height();
             }
             // const selector = 'li';
             // event.target.closest('button');
